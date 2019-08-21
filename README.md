@@ -1,18 +1,14 @@
 # ITLogger
 
-> React app to track IT department tasks and issues. Uses JSON-Server as a mock backend. This is part of my React course on Udemy
+> Aplicação em React para acompanhamentos de atividades do setor de TI de uma empresa. Desenvolvida como parte do curso "React Front To Back 2019" de Brad Traversy.
 
-## Usage
+## Uso
 
 ### `npm install`
 
 ### `npm run dev`
 
-Runs the app with the backend JSON-Server<br>
-Open [http://localhost:3000](http://localhost:3000)
-Server [http://localhost:5000](http://localhost:5000)
-db.json contains data
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
+JSON-Server foi utilizado para o back-end<br>
+Abra [http://localhost:3000](http://localhost:3000)
+Servidor [http://localhost:5000](http://localhost:5000)
+db.json contem daddos

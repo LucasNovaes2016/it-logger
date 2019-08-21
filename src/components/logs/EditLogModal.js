@@ -20,7 +20,7 @@ const EditLogModal = ({ current, updateLog }) => {
 
   const onSubmit = () => {
     if (message === '' || tech === '') {
-      M.toast({ html: 'Please enter a message and tech' });
+      M.toast({ html: 'Por favor digite uma mensagem e um técnico' });
     } else {
       const updLog = {
         id: current.id,
@@ -31,7 +31,7 @@ const EditLogModal = ({ current, updateLog }) => {
       };
 
       updateLog(updLog);
-      M.toast({ html: `Log updated by ${tech}` });
+      M.toast({ html: `Log atualizado por ${tech}` });
 
       // Clear Fields
       setMessage('');
@@ -43,7 +43,7 @@ const EditLogModal = ({ current, updateLog }) => {
   return (
     <div id='edit-log-modal' className='modal' style={modalStyle}>
       <div className='modal-content'>
-        <h4>Enter System Log</h4>
+        <h4>Forneça os dados do log</h4>
         <div className='row'>
           <div className='input-field'>
             <input
@@ -64,7 +64,7 @@ const EditLogModal = ({ current, updateLog }) => {
               onChange={e => setTech(e.target.value)}
             >
               <option value='' disabled>
-                Select Technician
+                Selecione o técnico
               </option>
               <TechSelectOptions />
             </select>
@@ -82,7 +82,7 @@ const EditLogModal = ({ current, updateLog }) => {
                   value={attention}
                   onChange={e => setAttention(!attention)}
                 />
-                <span>Needs Attention</span>
+                <span>Atenção necessária</span>
               </label>
             </p>
           </div>
@@ -94,7 +94,7 @@ const EditLogModal = ({ current, updateLog }) => {
           onClick={onSubmit}
           className='modal-close waves-effect blue waves-light btn'
         >
-          Enter
+          Atualizar
         </a>
       </div>
     </div>

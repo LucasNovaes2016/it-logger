@@ -10,14 +10,14 @@ const AddTechModal = ({ addTech }) => {
 
   const onSubmit = () => {
     if (firstName === '' || lastName === '') {
-      M.toast({ html: 'Please enter the first and last name' });
+      M.toast({ html: 'Por favor, entre o primeiro e o último nome' });
     } else {
       addTech({
         firstName,
         lastName
       });
 
-      M.toast({ html: `${firstName} ${lastName} was added as a tech` });
+      M.toast({ html: `${firstName} ${lastName} foi adicionado como técnico` });
 
       // Clear Fields
       setFirstName('');
@@ -28,7 +28,7 @@ const AddTechModal = ({ addTech }) => {
   return (
     <div id='add-tech-modal' className='modal'>
       <div className='modal-content'>
-        <h4>New Technician</h4>
+        <h4>Novo Técnico</h4>
         <div className='row'>
           <div className='input-field'>
             <input
@@ -38,7 +38,7 @@ const AddTechModal = ({ addTech }) => {
               onChange={e => setFirstName(e.target.value)}
             />
             <label htmlFor='firstName' className='active'>
-              First Name
+              Primeiro Nome
             </label>
           </div>
         </div>
@@ -52,7 +52,7 @@ const AddTechModal = ({ addTech }) => {
               onChange={e => setLastName(e.target.value)}
             />
             <label htmlFor='lastName' className='active'>
-              Last Name
+              Sobrenome
             </label>
           </div>
         </div>
@@ -63,7 +63,7 @@ const AddTechModal = ({ addTech }) => {
           onClick={onSubmit}
           className='modal-close waves-effect blue waves-light btn'
         >
-          Enter
+          Adicionar
         </a>
       </div>
     </div>

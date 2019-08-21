@@ -12,7 +12,7 @@ const AddLogModal = ({ addLog }) => {
 
   const onSubmit = () => {
     if (message === '' || tech === '') {
-      M.toast({ html: 'Please enter a message and tech' });
+      M.toast({ html: 'Por favor digite uma mensagem e um técnico' });
     } else {
       const newLog = {
         message,
@@ -23,7 +23,7 @@ const AddLogModal = ({ addLog }) => {
 
       addLog(newLog);
 
-      M.toast({ html: `Log added by ${tech}` });
+      M.toast({ html: `Log adicionado por ${tech}` });
 
       // Clear Fields
       setMessage('');
@@ -35,7 +35,7 @@ const AddLogModal = ({ addLog }) => {
   return (
     <div id='add-log-modal' className='modal' style={modalStyle}>
       <div className='modal-content'>
-        <h4>Enter System Log</h4>
+        <h4>Forneça os dados do log</h4>
         <div className='row'>
           <div className='input-field'>
             <input
@@ -45,7 +45,7 @@ const AddLogModal = ({ addLog }) => {
               onChange={e => setMessage(e.target.value)}
             />
             <label htmlFor='message' className='active'>
-              Log Message
+              Mensagem do Log
             </label>
           </div>
         </div>
@@ -59,7 +59,7 @@ const AddLogModal = ({ addLog }) => {
               onChange={e => setTech(e.target.value)}
             >
               <option value='' disabled>
-                Select Technician
+                Selecione o técnico
               </option>
               <TechSelectOptions />
             </select>
@@ -77,7 +77,7 @@ const AddLogModal = ({ addLog }) => {
                   value={attention}
                   onChange={e => setAttention(!attention)}
                 />
-                <span>Needs Attention</span>
+                <span>Atenção necessária</span>
               </label>
             </p>
           </div>
@@ -89,7 +89,7 @@ const AddLogModal = ({ addLog }) => {
           onClick={onSubmit}
           className='modal-close waves-effect blue waves-light btn'
         >
-          Enter
+          Adicionar
         </a>
       </div>
     </div>
